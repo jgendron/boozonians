@@ -1,4 +1,4 @@
-# Shroom-a-thon Configuration File
+# Alien-nation Configuration File
 
 ## Category
 
