@@ -15,15 +15,15 @@ You can fool with the last file to test the scoring script.  We can also use the
 
 The team input is simply a text file with the prediction of 12 observations on separate lines. The truth data is this set of 12 results
 
-dangerous
-friendly
-friendly
-dangerous
-friendly
-dangerous
-friendly
-dangerous
-friendly
-friendly
-friendly
+dangerous  
 friendly  
+friendly  
+dangerous  
+friendly  
+dangerous  
+friendly  
+dangerous  
+friendly  
+friendly  
+friendly  
+friendly    
