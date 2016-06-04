@@ -1,5 +1,5 @@
 #!/usr/bin/python -tt
-# 'shroom-scorer
+# alien-nation-scorer
 
 '''
 This scoring program takes as an argument the input ...blah, blah
