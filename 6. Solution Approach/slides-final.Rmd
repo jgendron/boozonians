@@ -1,0 +1,112 @@
+---
+title: "'shroom-a-thon"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## To Eat or Not-to-Eat?
+
+There is no simple rule to determine if a mushroom is edible or not. Unlike little ditties for poison ivy like __leaflets three, let it be__, you need to examine multiple features of a mushroom to determine if it is edible or not. For instance, see Rule 14 in this resource on [mushroom collecting][1].
+
+This provides the results on predicting the __edible__ from __poisonous__ mushrooms provided in the [UCI Mushroom Data Set][2]. The dataset was modified to remove the variable with `na` values (it was not a good predictor. The remaining data included 8,123 mushrooms and 21 variables. 
+
+This deck is written in R Slidy to demonstrate modeling approaches that yield accurate prediction of the data provided into one of two classes. 
+
+Machine learning can keep you alive in the zombie apocalypse when you forage for grub...at least when it comes to picking mushrooms. Keeping yourself safe from the many other ways of becoming zombie-chow is on you.
+
+Good luck, and eat well with this model.
+
+## Three classification methods checked
+
+- Classification Tree (less than 1% error)
+- Conditional Inference Tree (less than 1% error)
+- Random Forest (perfect classifier)
+
+If you had to eat, which ones "work for you?"
+
+## Classification Tree
+
+```{r classTree, echo = FALSE, warning=FALSE, message=FALSE,error=FALSE}
+
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(rpart))
+suppressPackageStartupMessages(library(rattle))
+suppressWarnings(suppressPackageStartupMessages(library(party)))
+suppressPackageStartupMessages(library(randomForest))
+```
+
+Let's split the data into a 70% training set to do the machine learning and use the other 30% to test the model.
+
+```{r testTrain, echo = TRUE, warning=FALSE, message=FALSE}
+mush <- read.csv("./data/mushroomUCI_modified.csv")
+
+set.seed(524)
+train <- sample_frac(mush, 0.7, replace = FALSE)
+rows <- as.numeric(row.names(train))
+test <- mush[-rows, ]
+
+fit <- rpart(result ~ . , data = train, method = "class")
+predicted <- predict(fit, newdata = test, type = "class")
+table(predicted, test$result)
+```
+
+Not bad...unless **you** get one of those 11 'shrooms.
+
+## Classification Tree
+
+```{r prettyPlot, echo = TRUE}
+fancyRpartPlot(fit, main = "Mushroom Classification Results",
+               sub = "Variable Feature legend is available in the data dictionary")
+```
+
+## Conditional Inference Tree
+```{r conditional, echo=TRUE, warning=FALSE}
+fitC <- ctree(result ~ ., data = train)
+table(predict(fitC, newdata = test), test$result)
+```
+
+This is a __better__ predictor, but you still have 6 chances to...well... 
+             
+                         (*_*)  -->  (X_X)
+
+## Conditional Inference Tree
+``` {r plot, echo = FALSE, warning = FALSE, include = FALSE}
+
+png("ctree.png", res = 80, height = 600, width = 800) 
+   plot(fitC)
+dev.off()
+
+```
+![Dark Gray bars indicates proportion of poisonous mushrooms in __terminal__ leaf](ctree.png)
+
+
+## Random Forest
+``` {r RF, echo = TRUE}
+
+fitRF <- randomForest(result ~ . ,   data = train)
+predictedRF <- predict(fitRF, newdata = test, type = "class")
+table(predictedRF, test$result)
+```
+This table shows the results of a random forest model.
+
+In this case, it is a perfect classifier, because of the iterative nature of random forests. 
+
+They are not plotted easily, so this output represents the output.
+
+## Random Forest
+
+...and here are the relative importance of the variables
+``` {r imp, echo = FALSE, size = "tiny"}
+importance<-as.numeric(importance(fitRF))
+variable<-row.names(importance(fitRF))
+vars <- as.data.frame(cbind(variable, importance),
+                      stringsAsFactors = FALSE)
+vars$importance<-as.numeric(vars$importance)
+arrange(vars, desc(importance))
+```
+
+[1]: http://mushroom-collecting.com/mushroomcollecting2.html
+[2]: https://archive.ics.uci.edu/ml/datasets/Mushroom 

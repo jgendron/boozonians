@@ -1,0 +1,12 @@
+     edible
+poison
+EDIBLE    
+poison
+  edible
+Poison
+      Edible    
+poison
+ edible
+  edible
+edible
+  edible
