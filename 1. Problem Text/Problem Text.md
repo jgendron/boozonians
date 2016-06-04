@@ -1,4 +1,4 @@
-# Shroom-a-thon
+# Alien-nation Hackathon
 
 ## Problem Statement
 
@@ -9,7 +9,7 @@ This data set provides information about probe samples of various species of pla
 ## Data Description
 1. Relevant Information:
     
-2. Number of Instances: 8123
+2. Number of Instances: 8,123
 
 3. Number of Attributes: 21 (all nominally valued)
 
