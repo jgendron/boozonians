@@ -1,5 +1,5 @@
 ---
-title: "'shroom-a-thon"
+title: "'alien-nation hackathon"
 output: slidy_presentation
 ---
 
@@ -7,17 +7,22 @@ output: slidy_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## To Eat or Not-to-Eat?
+## To Trust or Not-to-Trust?
 
-There is no simple rule to determine if a mushroom is edible or not. Unlike little ditties for poison ivy like __leaflets three, let it be__, you need to examine multiple features of a mushroom to determine if it is edible or not. For instance, see Rule 14 in this resource on [mushroom collecting][1].
+There is no simple rule to determine if someone - or something - is trustworthy. Unlike little ditties for poison ivy like __leaflets three, let it be__, you need to examine multiple features of alien lifeforms to determine if they are friendly or not.
 
-This provides the results on predicting the __edible__ from __poisonous__ mushrooms provided in the [UCI Mushroom Data Set][2]. The dataset was modified to remove the variable with `na` values (it was not a good predictor. The remaining data included 8,123 mushrooms and 21 variables. 
+This slide presentation provides the results of predicting the __friendly__ from __dangerous__ Boozonians on planet Hamiltus in the Allen galaxy. Truth be told, the inspiration for this data set is an adaption of the Mushroom Dataset found in the [UCI Mushroom Data Set][1]. There are so many web-based solutions for UCI datasets that the team decided to obscure the data without affecting its underlying predictive value.
+
+The dataset provides 8,123 observations from a plantary probe send prior to mission execution. It contains 21 features. The dataset is fairly balanced, which allows for a more generous environment in applyting dredictive modeling techniques:
+
+*  friendly lifeforms: 4,208 (51.8%)
+* dangerous lifeforms: 3,915 (48.2%)
 
 This deck is written in R Slidy to demonstrate modeling approaches that yield accurate prediction of the data provided into one of two classes. 
 
-Machine learning can keep you alive in the zombie apocalypse when you forage for grub...at least when it comes to picking mushrooms. Keeping yourself safe from the many other ways of becoming zombie-chow is on you.
+Machine learning can keep you alive in use cases of interstellar exploration. Keeping yourself safe from the many other ways of becoming alien-chow is on you.
 
-Good luck, and eat well with this model.
+Good luck, live long and prosper using this model.
 
 ## Three classification methods checked
 
@@ -25,7 +30,7 @@ Good luck, and eat well with this model.
 - Conditional Inference Tree (less than 1% error)
 - Random Forest (perfect classifier)
 
-If you had to eat, which ones "work for you?"
+If you had to choose your friends, which ones "work for you?"
 
 ## Classification Tree
 
@@ -41,24 +46,24 @@ suppressPackageStartupMessages(library(randomForest))
 Let's split the data into a 70% training set to do the machine learning and use the other 30% to test the model.
 
 ```{r testTrain, echo = TRUE, warning=FALSE, message=FALSE}
-mush <- read.csv("./data/mushroomUCI_modified.csv")
+alien <- read.csv("./data/mushroomUCI_adapted.csv")
 
 set.seed(524)
-train <- sample_frac(mush, 0.7, replace = FALSE)
+train <- sample_frac(alien, 0.7, replace = FALSE)
 rows <- as.numeric(row.names(train))
-test <- mush[-rows, ]
+test <- alien[-rows, ]
 
 fit <- rpart(result ~ . , data = train, method = "class")
 predicted <- predict(fit, newdata = test, type = "class")
 table(predicted, test$result)
 ```
 
-Not bad...unless **you** get one of those 11 'shrooms.
+Not bad...unless **you** meet one of those 11 aliens.
 
 ## Classification Tree
 
 ```{r prettyPlot, echo = TRUE}
-fancyRpartPlot(fit, main = "Mushroom Classification Results",
+fancyRpartPlot(fit, main = "Alien Lifeform Classification Results",
                sub = "Variable Feature legend is available in the data dictionary")
 ```
 
@@ -80,7 +85,7 @@ png("ctree.png", res = 80, height = 600, width = 800)
 dev.off()
 
 ```
-![Dark Gray bars indicates proportion of poisonous mushrooms in __terminal__ leaf](ctree.png)
+![Light Gray bars indicates proportion of dangerous lifeforms in terminal leaf](ctree.png)
 
 
 ## Random Forest
@@ -94,7 +99,7 @@ This table shows the results of a random forest model.
 
 In this case, it is a perfect classifier, because of the iterative nature of random forests. 
 
-They are not plotted easily, so this output represents the output.
+They are not plotted easily, so this output is the way to determine results.
 
 ## Random Forest
 
@@ -108,5 +113,4 @@ vars$importance<-as.numeric(vars$importance)
 arrange(vars, desc(importance))
 ```
 
-[1]: http://mushroom-collecting.com/mushroomcollecting2.html
-[2]: https://archive.ics.uci.edu/ml/datasets/Mushroom 
+[1]: https://archive.ics.uci.edu/ml/datasets/Mushroom 

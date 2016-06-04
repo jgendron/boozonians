@@ -6,4 +6,4 @@ The purpose of this deliverable is to demonstrate our problem is solvable. Per t
 
 All the code is done in R and uses the single data file in the folder `data`. The code splits the data into training and testing and goes from there. It is the complete process.
 
-The code itself is wrapped in an R Markdown file that creates a Slidy presentation to describe what is happening in the codebase. You can view that [Slidy presentation here](http://jgendron.github.io/BuildAHackathon/).
+The code itself is wrapped in an R Markdown file that creates a Slidy presentation to describe what is happening in the codebase. You can view that [Slidy presentation here](http://jgendron.github.io/boozonians/).

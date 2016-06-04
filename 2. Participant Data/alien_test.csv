@@ -1,4 +1,4 @@
-cap.shape,cap.surface,cap.color,bruises,odor,gill.attachment,gill.spacing,gill.size,gill.color,stalk.shape,stalk.surface.above.ring,stalk.surface.below.ring,stalk.color.above.ring,stalk.color.below.ring,veil.type,veil.color,ring.number,ring.type,spore.print.color,population,habitat
+head.shape,head.surface,head.color,lesions,odor,gill.attachment,gill.spacing,gill.size,gill.color,body.shape,body.surface.above.neck,body.surface.below.neck,body.color.above.neck,body.color.below.neck,foot.type,foot.color,number.heads,eye.type,tattoo.print.color,population,habitat
 x,y,w,t,p,f,c,n,n,e,s,s,w,w,p,w,o,p,k,s,u
 x,y,y,t,a,f,c,b,n,e,s,s,w,w,p,w,o,p,k,n,g
 b,y,w,t,l,f,c,b,n,e,s,s,w,w,p,w,o,p,n,s,m
