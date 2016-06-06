@@ -41,5 +41,5 @@ Conduct a search on classification models which are able to take advantage of la
 *Conditional Inference Tree
 *Random Forest
 
-Good luck!
+Good luck, the future of Earth depends on you!
 
