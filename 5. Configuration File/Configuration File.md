@@ -2,7 +2,7 @@
 
 ## Category
 
-* Alien-nation is data classification challenge.  You will use 21 features to conduct a binary classification of aliens as either friendly or dangerous.
+Alien-nation is data classification challenge.  You will use 21 features to conduct a binary classification of aliens as either friendly or dangerous.
 
 ## Relevant files and paths
 
@@ -22,7 +22,7 @@
 * There are a total 2,437 aliens to classify.  You will receive one point for each alien correctly classified as friendly or hostile.  There is no differentiation I points for false positives versus false negatives.
 
 ## Hints
-* See below.  Do not go here until you have tried your own algorithms.
+See below.  Do not go here until you have tried your own algorithms.
 
 *
 
@@ -122,7 +122,7 @@
 
 *
 
-* Conduct a search on classification models which are able to take advantage of large features with discrete and continues variables.  Here are some algorithms that were used with varying degrees of success while designing the problem:
+Conduct a search on classification models which are able to take advantage of large features with discrete and continues variables.  Here are some algorithms that were used with varying degrees of success while designing the problem:
 
 * Naïve Bayes
 * Classification Tree
