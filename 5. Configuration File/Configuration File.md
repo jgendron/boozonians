@@ -19,7 +19,7 @@ Alien-nation is data classification challenge.  You will use 21 features to cond
 * SolutionApproach.Rproj – This file contains several models which solve the classification problem to varying degrees of accuracy.  The file will be available to students once the completion is over.
 
 ## Total Points
-* There are a total 2,437 aliens to classify.  You will receive one point for each alien correctly classified as friendly or hostile.  There is no differentiation I points for false positives versus false negatives.
+There are a total 2,437 aliens to classify.  You will receive one point for each alien correctly classified as friendly or hostile.  There is no differentiation I points for false positives versus false negatives.
 
 ## Hints
 See below.  Do not go here until you have tried your own algorithms.
