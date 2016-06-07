@@ -8,15 +8,15 @@ Alien-nation is data classification challenge.  Teams will use 21 features to co
 
 * Problem Text.md – This file is the background for alien-nation, please have all teams read before beginning.
 
-* alien_train.csv – This file is the training data set.  Each field represents one feature of the alien (columns B to V).  Teams will you use this data in conjunction with the results (column A) to train your model.
+* alien_train.csv – This file is the training data set.  Each field represents one feature of the alien (columns B to V).  Teams will you use this data in conjunction with the results (column A) to train their model.
 
-* alien_test.csv – This file is the test data set.  Once a team has trained its model, have them run the model against this set and then provide the answers to the administrator.  You will notice in this model there is no answer column, the features are instead located in columns A to U.
+* alien_test.csv – This file is the test data set.  Once a team has trained its model, have them run the model against this set and then provide the answers to the administrator.  You will notice in this dataset there is no answer column, the features are instead located in columns A to U.
 
-* alien_answer_key.txt – This file is the answer key for the test set.  It is a sequential text file with each result (friendly or dangerous) separated by a newline character.  It will be available to proctors only until the end of the exam!  Do not disseminate to teams.
+* alien_answer_key.txt – This file is the answer key for the test set.  It is a sequential text file with each result (friendly or dangerous) separated by a newline character.  It will be available only to proctors until the end of the exam!  Do not disseminate to teams.
 
 * scorer.py - This script scores the solutions submitted by students after taking a sequential text file of solutions (“friendly” or “dangerous” separated by newline). It will be available only to proctors.  Do not disseminate to teams.
 
-* SolutionApproach.Rproj – This file contains several models which solve the classification problem to varying degrees of accuracy.  Make this file available to students once the completion is over.
+* SolutionApproach.Rproj – This file contains several models which solve the classification problem to varying degrees of accuracy.  Make this file available to students once the hackathon is over.
 
 ## Total Points
 There are a total 2,437 aliens to classify.  A team will receive one point for each alien correctly classified as friendly or hostile.  There is no differentiation of points for false positives versus false negatives.
