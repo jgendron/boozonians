@@ -36,6 +36,9 @@ def main():
     t = open(team_input,'r') 
     submission = t.readlines()
     t.close
+    if len(submission) != len(truth_data):
+        print('Ooops! Your submission should inclue 2,437 lines of data')
+        sys.exit()
     #-----
     # print preamble to console
     print('\nThank you for submitting your predictions...')
