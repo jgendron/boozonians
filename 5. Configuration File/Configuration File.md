@@ -122,11 +122,10 @@ See below.  Do not provide access to teams until they have tried their own algor
 
 *
 
-Have teams conduct a search on classification models which are able to take advantage of large features with discrete and continues variables.  Here are some algorithms that were used with varying degrees of success while designing the problem:
+Have teams conduct a search on classification models which are able to take advantage of large features with categorical variables.  Here are some algorithms that were used with varying degrees of success while designing the problem:
 
-* Naïve Bayes
 * Classification Tree
 * Conditional Inference Tree
-* Random Forest (100% success rate)
+* Random Forest
 
 Good luck to your students, the future of Earth depends on them!
