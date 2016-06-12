@@ -1,23 +1,19 @@
 # Alien-nation Hackathon
 
 ## Problem Statement
-You have just arrived in orbit of an alien world called Hamiltus with abundant signs of life as part of the first manned mission to the planet.  The planet is inhabited by a humanoid alien race known as Boozonians.
+You have just arrived in orbit of an alien world called Hamiltus. It showed abundant signs of life from earlier probes, and you are now part of the first, manned mission to the planet. The planet is inhabited by a humanoid-alien race known as Boozonians.
 
-Previous unmanned probes sent to the planet have discovered that many of the Boozonians are young peace loving urban dwellers who are friendly and drink craft beer on the planet's equivalent of U Street or Adams Morgan.
+Previous unmanned probes sent to the planet discovered that many of the Boozonians are peace-loving, urban dwellers who are friendly. They show many hipster characteristics to include drinking fine, craft beer in the upscale metropolitan areas (think U Street or Adams Morgan in Washington D.C.)
 
-However, these same probes also indicated that many other Boozonians are slightly older ex-military officers and intelligence analysts who were alive to see the original Independence Day movie in 1996.  They are likely to be hostile to a perceived alien invasion.
+However, these same probes also indicated that many other Boozonians served with the Hamiltus Defense Force. Part of their training was watching full-episode broadcasts of the original Independence Day movie from 1996 - with director's comments.  They are likely to be hostile to a perceived alien invasion.
 
-Before you and the rest of the crew descend to the surface in 3 hours, it is important to know what you will encounter. As the Data Science Officer aboard the ship, your mission is to analyze data collected by several probes previously sent to the planet to try to differentiate between friendly and hostile lifeforms.
+Before you and the rest of the crew descend to the surface in seven hours, it is important to predict what you will encounter. As the Data Science Officer aboard the ship, your mission is to lead your team and analyze data to try to differentiate between friendly and hostile lifeforms. You have a dataset assembled from collections by probes previously sent to the planet.
 
-Once you have built a model it will be uploaded to every astronaut's onboard spacesuit computer to instantly analyze a Boozonian as friendly or hostile.  The team is counting on you to make it down and back alive. Good luck!
-
-## Background Information
-
-This data set provides information about probe samples of various species of planet Hamiltus lifeforms called Boozonians.  Each species is  identified as either friendly or dangerous based on extensive lab testing and machine learning predictions of probe results.
+Your job is to build a predictive model. That model will be the basis for a smartwatch app for all who deploy to the planet's surface. It will allow them to identify friendly or dangerous Boozonians based on the most important physical features of this alien race. The team is counting on you to make it down and back alive. Good luck!
 
 ## Background Information
 
-This data set provides information about probe samples of various species of planet Hamiltus lifeforms called Boozonians.  Each species is  identified as either friendly or dangerous based on extensive lab testing and machine learning predictions of probe results.
+You are provided a dataset with characteristics of Boozonians collected from previous probe samples. The Training Set contains the results of many observations of Boozonians.  Each observation is identified as either friendly or dangerous based on extensive lab testing and machine learning predictions of probe results. You also have a Test Set to create the model for upload to the smartwatch.
 
 ## Data Description
 1. Relevant Information:
@@ -27,10 +23,10 @@ This data set provides information about probe samples of various species of pla
 3. Number of Attributes: 21 (all nominally valued)
 
 4. Attribute Information: (classes: edible=e, poisonous=p)
-     1. head-shape:                bell=b,conical=c,convex=x,flat=f,
+     1. head-shape:               bell=b,conical=c,convex=x,flat=f,
                                   knobbed=k,sunken=s
-     2. head-surface:              fibrous=f,grooves=g,scaly=y,smooth=s
-     3. head-color:                brown=n,buff=b,cinnamon=c,gray=g,green=r,
+     2. head-surface:             fibrous=f,grooves=g,scaly=y,smooth=s
+     3. head-color:               brown=n,buff=b,cinnamon=c,gray=g,green=r,
                                   pink=p,purple=u,red=e,white=w,yellow=y
      4. lesions:                  lesions=t,no=f
      5. odor:                     almond=a,lemon=l,creosote=c,fishy=y,foul=f,
@@ -41,7 +37,7 @@ This data set provides information about probe samples of various species of pla
      9. gill-color:               black=k,brown=n,buff=b,chocolate=h,gray=g,
                                   green=r,orange=o,pink=p,purple=u,red=e,
                                   white=w,yellow=y
-    10. body-shape:              enlarging=e,tapering=t
+    10. body-shape:               enlarging=e,tapering=t
     11. body-shape-surface-above-neck: fibrous=f,scaly=y,silky=k,smooth=s
     12. body-surface-below-neck:  fibrous=f,scaly=y,silky=k,smooth=s
     13. body-shape-color-above-neck:   brown=n,buff=b,cinnamon=c,gray=g,orange=o,
@@ -51,7 +47,7 @@ This data set provides information about probe samples of various species of pla
     15. foot-type:                partial=p,unknown=u
     16. foot-color:               brown=n,orange=o,white=w,yellow=y
     17. number-heads:             none=n,one=o,two=t
-    18. eye-type:                cobwebby=c,evanescent=e,flaring=f,large=l,
+    18. eye-type:                 cobwebby=c,evanescent=e,flaring=f,large=l,
                                   none=n,pendant=p,sheathing=s,zone=z
     19. tattoo-print-color:       black=k,brown=n,buff=b,chocolate=h,green=r,
                                   orange=o,purple=u,white=w,yellow=y
