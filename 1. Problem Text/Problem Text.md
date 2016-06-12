@@ -9,7 +9,7 @@ However, these same probes also indicated that many other Boozonians are slightl
 
 Before you and the rest of the crew descend to the surface in 3 hours, it is important to know what you will encounter. As the Data Science Officer aboard the ship, your mission is to analyze data collected by several probes previously sent to the planet to try to differentiate between friendly and hostile lifeforms.
 
-Once you have built a model it will be uploaded to every astronauts onboard spacesuit computer to instantly analyze a Boozonian as friendly or hostile.  The team is counting on you to make it down and back alive. Good luck!
+Once you have built a model it will be uploaded to every astronaut's onboard spacesuit computer to instantly analyze a Boozonian as friendly or hostile.  The team is counting on you to make it down and back alive. Good luck!
 
 ## Background Information
 
