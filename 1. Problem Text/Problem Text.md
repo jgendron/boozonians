@@ -1,6 +1,19 @@
 # Alien-nation Hackathon
 
 ## Problem Statement
+You have just arrived in orbit of an alien world called Hamiltus with abundant signs of life as part of the first manned mission to the planet.  The planet is inhabited by a humanoid alien race known as Boozonians.
+
+Previous unmanned probes sent to the planet have discovered that many of the Boozonians are young peace loving urban dwellers who are friendly and drink craft beer on the planet's equivalent of U Street or Adams Morgan.
+
+However, these same probes also indicated that many other Boozonians are slightly older ex-military officers and intelligence analysts who were alive to see the original Independence Day movie in 1996.  They are likely to be hostile to a perceived alien invasion.
+
+Before you and the rest of the crew descend to the surface in 3 hours, it is important to know what you will encounter. As the Data Science Officer aboard the ship, your mission is to analyze data collected by several probes previously sent to the planet to try to differentiate between friendly and hostile lifeforms.
+
+Once you have built a model it will be uploaded to every astronauts onboard spacesuit computer to instantly analyze a Boozonian as friendly or hostile.  The team is counting on you to make it down and back alive. Good luck!
+
+## Background Information
+
+This data set provides information about probe samples of various species of planet Hamiltus lifeforms called Boozonians.  Each species is  identified as either friendly or dangerous based on extensive lab testing and machine learning predictions of probe results.
 
 ## Background Information
 
