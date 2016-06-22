@@ -13,7 +13,7 @@ There is no simple rule to determine if someone - or something - is trustworthy.
 
 This slide presentation provides the results of predicting the __friendly__ from __dangerous__ Boozonians on planet Hamiltus in the Allen galaxy. Truth be told, the inspiration for this data set is an adaption of the Mushroom Dataset found in the [UCI Mushroom Data Set][1]. There are so many web-based solutions for UCI datasets that the team decided to obscure the data without affecting its underlying predictive value.
 
-The dataset provides 8,123 observations from a plantary probe send prior to mission execution. It contains 21 features. The dataset is fairly balanced, which allows for a more generous environment in applyting dredictive modeling techniques:
+The dataset provides 8,123 observations from a plantary probe send prior to mission execution. It contains 21 features. The dataset is fairly balanced, which allows for a more generous environment in applying predictive modeling techniques:
 
 *  friendly lifeforms: 4,208 (51.8%)
 * dangerous lifeforms: 3,915 (48.2%)
